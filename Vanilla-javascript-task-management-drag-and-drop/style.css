@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+:root{
+  --white: white;
+  --black: black;
+  --grey: #898787;
+  --darkgrey: #5f5d5d;
+  --red: #e13322;
+  --yellow:#e89616;
+  --sky: #49ccf9;
+}
+body{
+  margin: 0;
+  background: url(background.jpg) repeat;
+  font-family: 'Roboto', sans-serif;
+}
+h1{
+  margin: 30px 0 20px 0;
+  text-align: center;
+  color: var(--grey);
+  font-size: 2.5em;
+  font-weight: 900;
+}
+#error {
+  width: 100%;
+  text-align: center;
+  color: var(--red);
+  font-weight: 700;
+  font-size: 20px;
+  opacity: .8;
+}
+.d-none{
+  display: none !important;
+}
+.d-block{
+  display: block !important;
+}
+.d-inline-block{
+  display: inline-block !important;
+}
+.container{
+  width: 80%;
+  margin: auto;
+}
+.single-list{
+  min-height: 500px;
+  box-sizing: border-box;
+}
+.textarea-group{
+  width: 70%;
+  height: 200px;
+  margin: 20px auto 50px auto;
+  text-align: center;
+  position: relative;
+}
+.textarea-group:before{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height:50px;
+  background: var(--white);
+  bottom:0;
+  left:0;
+  border-radius: 0 0 10px 10px;
+}
+.textarea-btn-group{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.add-task-textarea{
+  width: 100%;
+  height: 200px;
+  resize: none;
+  border-radius:10px;
+  border: var(--white) solid 1px;
+  box-shadow: #ccc 5px 5px 15px;
+  padding: 20px 20px 50px 20px;
+  box-sizing: border-box;
+  font-size: 17px;
+}
+.box-main-group{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+}
+.list{
+  padding:10px;
+  box-sizing: border-box;
+  width:35%;
+  margin-top: 20px;
+}
+.list .heading{
+  padding: 13px 20px;
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--white);
+  border-radius: 10px 10px 0 0;
+}
+.to-do-heading{
+  background: var(--red);
+}
+.in-progress-heading{
+  background: var(--yellow);
+}
+.done-heading{
+  background: var(--sky);
+}
+.custom-btn{
+  padding: 6px 10px;
+  margin-top:30px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--white);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: .7;
+  transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+}
+.custom-btn:hover{
+  opacity: 1;
+}
+#todobtn {
+  background: var(--red);
+  border: var(--red) solid 1px;
+}
+#progressbtn {
+  background:var(--yellow);
+  border: var(--yellow) solid 1px;
+}
+#donebtn {
+  background: var(--sky);
+  border: var(--sky) solid 1px;
+}
+.card {
+  position: relative;
+  padding: 20px;
+  background: var(--white);
+  color: var(--darkgrey);
+  font-size:17px;
+  box-shadow: #d8dbdc 2px 2px 10px;
+  cursor: grab;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+.card:not(:nth-child(1)) {
+  margin: 10px 0;
+  border-radius: 10px;
+}
+.card:nth-child(1){
+  margin: 0px 0 10px 0;
+  border-radius: 0 0 10px 10px;
+}
+.card-btn-group {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  opacity: 0;
+  transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+}
+.card:hover .card-btn-group{
+  opacity: 1;
+  top: -15px;
+}
+.card-btn-group button{
+  cursor: pointer;
+}
+.edit-btn,
+.delete-btn,
+.save-btn{
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  border: none;
+  border-radius: 100px;
+  transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+}
+.edit-btn{
+  background: #7979e4;
+}
+.delete-btn{
+  background: #e47979;
+}
+.save-btn{
+  background: #69cdc9;
+}
+.edit-btn:hover,
+.delete-btn:hover,
+.save-btn:hover{
+  box-shadow: #9fb1b9 2px 2px 10px;
+}
+.dragging{
+  box-shadow: #698f9f 2px 2px 10px;
+  opacity: .6;
+  background: #f0ffe8;
+}
+.edit-textarea{
+  display: none;
+  width: 100%;
+  height:150px;
+  resize: none;
+  font-family: inherit;
+  outline: #48a3f4 solid 2px;
+  border: 0;
+}
+.save-btn{
+  display: none;
+}
+@media screen and (max-width: 920px){
+  .container {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 757px){
+  .textarea-group {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 575px){
+  .box-main-group {
+    flex-wrap: wrap;
+  }
+  .list {
+    width: 95%;
+    margin-top: 0;
+  }
+  .single-list {
+    min-height: 0;
+  }
+}

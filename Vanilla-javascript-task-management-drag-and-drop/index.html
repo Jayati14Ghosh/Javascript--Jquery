@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drag and drop game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>Add new task</h1>
+      <p id="error"></p>
+      <div class="textarea-group">
+        <textarea class="add-task-textarea" placeholder="Type your task here..."></textarea>
+        <div class="textarea-btn-group">
+          <button type="button" name="button" id="todobtn" class="custom-btn">Add to To Do</button>
+          <button type="button" name="button" id="progressbtn" class="custom-btn">Add to In Progress</button>
+          <button type="button" name="button" id="donebtn" class="custom-btn">Add to Done</button>
+        </div>
+      </div>
+    </section>
+    <section class="container" id="taskMangeGroup">
+      <div class="box-main-group">
+        <aside class="list">
+          <p class="heading to-do-heading">To Do</p>
+          <div class="single-list to-do">
+            <div class="card" draggable="true">
+              <textarea class="edit-textarea"></textarea>
+              <div class="card-main-text">arrange meeting with team for #766 task discussion</div>
+              <div class="card-btn-group">
+                <button type="button" class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="save-btn"><i class="fa-solid fa-check"></i></button>
+                <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+            <div class="card" draggable="true">
+              <textarea class="edit-textarea"></textarea>
+              <div class="card-main-text">Join into Figma learning class<br>Tt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              <div class="card-btn-group">
+                <button type="button" class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="save-btn"><i class="fa-solid fa-check"></i></button>
+                <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <aside class="list">
+          <p class="heading in-progress-heading">In progress</p>
+          <div class="single-list in-progress">
+            <div class="card" draggable="true">
+              <textarea class="edit-textarea"></textarea>
+              <div class="card-main-text">Responsive issue fix #867 <br>Uuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </div>
+              <div class="card-btn-group">
+                <button type="button" class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="save-btn"><i class="fa-solid fa-check"></i></button>
+                <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+            <div class="card" draggable="true">
+              <textarea class="edit-textarea"></textarea>
+              <div class="card-main-text">New logic implement #868</div>
+              <div class="card-btn-group">
+                <button type="button" class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="save-btn"><i class="fa-solid fa-check"></i></button>
+                <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+            <div class="card" draggable="true">
+              <textarea class="edit-textarea"></textarea>
+              <div class="card-main-text">Create presentation for #656 #765 #578</div>
+              <div class="card-btn-group">
+                <button type="button" class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                <button type="button" class="save-btn"><i class="fa-solid fa-check"></i></button>
+                <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <aside class="list">
+            <p class="heading done-heading">Done</p>
+            <div class="single-list done">
+              <div class="card" draggable="true">
+                <textarea class="edit-textarea"></textarea>
+                <div class="card-main-text">New design for service page #771</div>
+                <div class="card-btn-group">
+                  <button type="button" class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="save-btn"><i class="fa-solid fa-check"></i></button>
+                  <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+              </div>
+              <div class="card" draggable="true">
+                <textarea class="edit-textarea"></textarea>
+                <div class="card-main-text">Team meetings for #654 <br>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                <div class="card-btn-group">
+                  <button type="button" class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                  <button type="button" class="save-btn"><i class="fa-solid fa-check"></i></button>
+                  <button type="button" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+              </div>
+            </div>
+        </aside>
+      </div>
+    </section>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>
